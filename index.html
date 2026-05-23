@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nishant Kumar | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================================
+RESET
+========================================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+
+font-family:'Inter',sans-serif;
+
+background:#080808;
+
+color:white;
+
+overflow-x:hidden;
+}
+
+/* =========================================
+LEFT BLUE BORDER
+========================================= */
+
+body::before{
+
+content:'';
+
+position:fixed;
+
+left:0;
+top:0;
+
+width:4px;
+height:100vh;
+
+background:
+linear-gradient(
+180deg,
+#4da3ff,
+#7fd1ff,
+#2f7bff,
+#7fd1ff,
+#4da3ff
+);
+
+background-size:100% 400%;
+
+animation:borderFlow 8s linear infinite;
+
+box-shadow:
+0 0 12px #4da3ff,
+0 0 26px rgba(77,163,255,0.45);
+
+z-index:9999;
+}
+
+@keyframes borderFlow{
+
+0%{
+background-position:0% 0%;
+}
+
+100%{
+background-position:0% 400%;
+}
+}
+
+/* =========================================
+SIDEBAR
+========================================= */
+
+.sidebar{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:200px;
+height:100vh;
+
+background:#0d0d0d;
+
+border-right:1px solid rgba(255,255,255,0.05);
+
+padding:45px 26px;
+
+z-index:1000;
+}
+
+.logo h2{
+
+font-size:1.9rem;
+
+font-weight:800;
+}
+
+.logo p{
+
+margin-top:5px;
+
+font-size:11px;
+
+letter-spacing:3px;
+
+color:#6c6c6c;
+}
+
+.sidebar ul{
+
+list-style:none;
+
+margin-top:55px;
+
+display:flex;
+
+flex-direction:column;
+
+gap:18px;
+}
+
+.sidebar ul li a{
+
+text-decoration:none;
+
+color:#919191;
+
+font-size:14px;
+
+transition:0.3s;
+}
+
+.sidebar ul li a:hover{
+
+color:white;
+
+padding-left:7px;
+}
+
+/* =========================================
+MENU
+========================================= */
+
+.menu-btn{
+
+position:fixed;
+
+top:18px;
+left:18px;
+
+width:48px;
+height:48px;
+
+background:#121212;
+
+border-radius:14px;
+
+display:none;
+
+align-items:center;
+justify-content:center;
+
+font-size:22px;
+
+cursor:pointer;
+
+z-index:2000;
+}
+
+/* =========================================
+MAIN
+========================================= */
+
+.main{
+
+margin-left:200px;
+}
+
+/* =========================================
+SECTION
+========================================= */
+
+section{
+
+padding:35px 6%;
+}
+
+/* =========================================
+HERO
+========================================= */
+
+.hero{
+
+min-height:auto;
+
+display:flex;
+
+align-items:center;
+
+padding-top:50px;
+padding-bottom:25px;
+}
+
+.hero-left{
+
+max-width:860px;
+}
+
+.hero-left h1{
+
+font-size:4.2rem;
+
+line-height:1;
+}
+
+.hero-left h1 span{
+
+color:#727272;
+
+font-weight:300;
+}
+
+/* =========================================
+SUBTITLE
+========================================= */
+
+.problem-line{
+
+margin-top:12px;
+
+font-size:1rem;
+
+letter-spacing:1px;
+
+color:#bdbdbd;
+}
+
+/* =========================================
+SVG DRAWING
+========================================= */
+
+.sketch-container{
+
+margin-top:12px;
+}
+
+.sketch-svg{
+
+width:100%;
+
+max-width:820px;
+}
+
+.sketch{
+
+fill:none;
+
+stroke:#ff4d4d;
+
+stroke-width:4.2;
+
+stroke-linecap:round;
+
+stroke-linejoin:round;
+
+stroke-dasharray:1800;
+
+stroke-dashoffset:1800;
+
+animation:draw 2.3s forwards;
+}
+
+.cross1{
+animation-delay:1.4s;
+}
+
+.cross2{
+animation-delay:1.7s;
+}
+
+.arrow{
+animation-delay:2.4s;
+}
+
+.thinker{
+animation-delay:3.5s;
+}
+
+.sketch-text{
+
+fill:#ff4d4d;
+
+font-size:35px;
+
+font-weight:700;
+
+opacity:0;
+
+animation:textShow 0.5s forwards;
+}
+
+.dev-text{
+animation-delay:1s;
+}
+
+.think-text{
+animation-delay:4.1s;
+}
+
+@keyframes draw{
+
+to{
+stroke-dashoffset:0;
+}
+}
+
+@keyframes textShow{
+
+to{
+opacity:1;
+}
+}
+
+/* =========================================
+DESCRIPTION
+========================================= */
+
+.description{
+
+margin-top:12px;
+
+max-width:560px;
+
+line-height:1.6;
+
+font-size:14px;
+
+color:#9f9f9f;
+}
+
+/* =========================================
+SOCIAL ROW
+========================================= */
+
+.social-row{
+
+display:flex;
+
+flex-direction:row;
+
+align-items:center;
+
+gap:10px;
+
+margin-top:16px;
+
+flex-wrap:nowrap;
+}
+
+/* =========================================
+SOCIAL BOX
+========================================= */
+
+.social-box{
+
+position:relative;
+
+overflow:hidden;
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+
+width:220px;
+
+min-width:220px;
+
+padding:13px 18px;
+
+border-radius:16px;
+
+background:
+linear-gradient(
+145deg,
+#151515,
+#0b0b0b
+);
+
+border:1px solid rgba(255,255,255,0.06);
+
+text-decoration:none;
+
+color:white;
+
+font-weight:600;
+
+font-size:14px;
+
+transition:0.35s;
+}
+
+.social-box:hover{
+
+transform:
+translateY(-4px);
+
+border-color:#4da3ff;
+
+box-shadow:
+0 0 20px rgba(77,163,255,0.22);
+}
+
+/* =========================================
+SHINE
+========================================= */
+
+.shine{
+
+position:absolute;
+
+top:-120%;
+left:-40%;
+
+width:60px;
+height:320%;
+
+background:
+linear-gradient(
+to right,
+transparent,
+rgba(77,163,255,0.12),
+rgba(77,163,255,0.8),
+rgba(77,163,255,0.12),
+transparent
+);
+
+transform:rotate(25deg);
+
+animation:shineMove 3.5s linear infinite;
+}
+
+@keyframes shineMove{
+
+0%{
+left:-50%;
+}
+
+100%{
+left:150%;
+}
+}
+
+/* =========================================
+ICONS
+========================================= */
+
+.social-icon{
+
+width:26px;
+height:26px;
+
+object-fit:contain;
+
+z-index:2;
+}
+
+/* =========================================
+REAL CF STYLE
+========================================= */
+
+.cf-lines{
+
+display:flex;
+
+align-items:flex-end;
+
+gap:4px;
+
+height:24px;
+
+z-index:2;
+}
+
+.cf-line{
+
+width:8px;
+
+border-radius:2px;
+}
+
+.yellow{
+
+height:12px;
+
+background:#f7c744;
+}
+
+.blue{
+
+height:20px;
+
+background:#4da3ff;
+}
+
+.red{
+
+height:16px;
+
+background:#ff5f5f;
+}
+
+.social-box span{
+
+z-index:2;
+}
+
+/* =========================================
+SECTION TITLE
+========================================= */
+
+.section-title{
+
+font-size:1.9rem;
+
+margin-bottom:18px;
+}
+
+/* =========================================
+ABOUT
+========================================= */
+
+#about{
+
+padding-top:20px;
+padding-bottom:20px;
+}
+
+/* =========================================
+SKILLS
+========================================= */
+
+#skills{
+
+padding-top:20px;
+padding-bottom:20px;
+}
+
+.skills-area{
+
+display:flex;
+
+flex-direction:column;
+
+gap:14px;
+
+overflow:hidden;
+}
+
+.skills-row{
+
+display:flex;
+
+gap:12px;
+
+width:max-content;
+}
+
+.left-move{
+
+animation:
+moveLeft 24s linear infinite;
+}
+
+.right-move{
+
+animation:
+moveRight 24s linear infinite;
+}
+
+@keyframes moveLeft{
+
+0%{
+transform:translateX(0%);
+}
+
+100%{
+transform:translateX(-50%);
+}
+}
+
+@keyframes moveRight{
+
+0%{
+transform:translateX(-50%);
+}
+
+100%{
+transform:translateX(0%);
+}
+}
+
+/* =========================================
+SKILL CARD
+========================================= */
+
+.skill-card{
+
+position:relative;
+
+overflow:hidden;
+
+padding:12px 20px;
+
+border-radius:999px;
+
+background:
+linear-gradient(
+145deg,
+#171717,
+#0b0b0b
+);
+
+border:1px solid rgba(255,255,255,0.08);
+
+font-size:13px;
+
+font-weight:600;
+
+white-space:nowrap;
+
+transition:0.35s;
+}
+
+.skill-card::before{
+
+content:'';
+
+position:absolute;
+
+top:0;
+left:-140%;
+
+width:90px;
+height:100%;
+
+background:
+linear-gradient(
+90deg,
+transparent,
+rgba(77,163,255,0.15),
+rgba(77,163,255,0.8),
+rgba(77,163,255,0.15),
+transparent
+);
+
+animation:
+cardShine 3s linear infinite;
+}
+
+@keyframes cardShine{
+
+0%{
+left:-140%;
+}
+
+100%{
+left:180%;
+}
+}
+
+.skill-card:hover{
+
+transform:
+translateY(-4px);
+
+border-color:#4da3ff;
+
+box-shadow:
+0 0 18px rgba(77,163,255,0.25);
+}
+
+/* =========================================
+PROJECTS
+========================================= */
+
+#projects{
+
+padding-top:20px;
+padding-bottom:20px;
+}
+
+.projects{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(260px,1fr));
+
+gap:16px;
+}
+
+.project{
+
+background:#121212;
+
+border:1px solid #242424;
+
+padding:22px;
+
+transition:0.35s;
+}
+
+.project:hover{
+
+transform:translateY(-5px);
+
+border-color:#4da3ff;
+}
+
+.project p{
+
+margin-top:10px;
+
+line-height:1.6;
+
+color:#9d9d9d;
+
+font-size:14px;
+}
+
+/* =========================================
+CONTACT
+========================================= */
+
+#contact{
+
+padding-top:20px;
+padding-bottom:20px;
+}
+
+.contact-form{
+
+max-width:620px;
+
+display:flex;
+
+flex-direction:column;
+
+gap:12px;
+}
+
+.contact-form input,
+.contact-form textarea{
+
+padding:14px;
+
+background:#121212;
+
+border:1px solid #2a2a2a;
+
+color:white;
+
+outline:none;
+
+font-family:'Inter',sans-serif;
+}
+
+.contact-form textarea{
+
+height:140px;
+
+resize:none;
+}
+
+.contact-form button{
+
+padding:14px;
+
+border:none;
+
+background:white;
+
+color:black;
+
+font-weight:700;
+
+cursor:pointer;
+}
+
+/* =========================================
+FOOTER
+========================================= */
+
+footer{
+
+padding:28px;
+
+text-align:center;
+
+color:#666;
+
+font-size:12px;
+}
+
+/* =========================================
+RESPONSIVE
+========================================= */
+
+@media(max-width:900px){
+
+.menu-btn{
+display:flex;
+}
+
+.sidebar{
+
+transform:translateX(-100%);
+
+transition:0.4s;
+}
+
+.sidebar.active{
+
+transform:translateX(0%);
+}
+
+.main{
+margin-left:0;
+}
+
+.hero-left h1{
+font-size:3rem;
+}
+
+.section-title{
+font-size:1.7rem;
+}
+
+.social-row{
+
+flex-direction:column;
+
+align-items:flex-start;
+}
+
+.social-box{
+
+width:100%;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- MENU -->
+
+<div class="menu-btn" onclick="toggleMenu()">
+☰
+</div>
+
+<!-- SIDEBAR -->
+
+<div class="sidebar" id="sidebar">
+
+<div class="logo">
+
+<h2>Nishant</h2>
+<p>PORTFOLIO</p>
+
+</div>
+
+<ul>
+
+<li><a href="#hero">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</div>
+
+<!-- MAIN -->
+
+<div class="main">
+
+<!-- HERO -->
+
+<section class="hero" id="hero">
+
+<div class="hero-left">
+
+<h1>
+Nishant <span>Kumar</span>
+</h1>
+
+<div class="problem-line">
+Developer & Problem Solver
+</div>
+
+<!-- SVG -->
+
+<div class="sketch-container">
+
+<svg viewBox="0 0 900 240" class="sketch-svg">
+
+<path
+d="
+M120,120
+C70,30 270,5 320,95
+C365,200 120,225 105,130
+C95,80 190,35 285,45
+"
+class="sketch"/>
+
+<text
+x="160"
+y="125"
+class="sketch-text dev-text">
+Developer
+</text>
+
+<path
+d="M105 60 L320 180"
+class="sketch cross1"/>
+
+<path
+d="M305 50 L120 190"
+class="sketch cross2"/>
+
+<path
+d="
+M350 115
+Q385 90 420 105
+T485 120
+T545 100
+L580 125
+M560 125
+L580 125
+L580 103
+"
+class="sketch arrow"/>
+
+<path
+d="
+M600,120
+C560,45 740,10 790,90
+C840,190 640,220 605,130
+C595,85 690,35 770,40
+"
+class="sketch thinker"/>
+
+<text
+x="655"
+y="122"
+class="sketch-text think-text">
+Thinker
+</text>
+
+</svg>
+
+</div>
+
+<p class="description">
+
+Frontend developer focused on immersive UI, algorithms and elegant digital experiences.
+
+</p>
+
+<!-- SOCIAL -->
+
+<div class="social-row">
+
+<!-- LEETCODE -->
+
+<a
+href="https://leetcode.com/u/nishantkr6783/"
+target="_blank"
+class="social-box">
+
+<span class="shine"></span>
+
+<img
+src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"
+class="social-icon">
+
+<span>LeetCode</span>
+
+</a>
+
+<!-- CODEFORCES -->
+
+<a
+href="https://codeforces.com/profile/Lizard01"
+target="_blank"
+class="social-box">
+
+<span class="shine"></span>
+
+<div class="cf-lines">
+
+<div class="cf-line yellow"></div>
+<div class="cf-line blue"></div>
+<div class="cf-line red"></div>
+
+</div>
+
+<span>Codeforces</span>
+
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<h2 class="section-title">
+About Me
+</h2>
+
+<p class="description">
+
+Computer Science student passionate about frontend engineering, algorithms, UI design and immersive digital experiences.
+
+</p>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+<h2 class="section-title">
+Skills
+</h2>
+
+<div class="skills-area">
+
+<!-- ROW 1 -->
+
+<div class="skills-row left-move">
+
+<div class="skill-card">💻 C++</div>
+<div class="skill-card">🧠 DSA</div>
+<div class="skill-card">⚛️ React</div>
+<div class="skill-card">🌐 HTML</div>
+<div class="skill-card">🎨 CSS</div>
+<div class="skill-card">🟨 JavaScript</div>
+<div class="skill-card">🚀 Node.js</div>
+<div class="skill-card">🐙 GitHub</div>
+
+<div class="skill-card">💻 C++</div>
+<div class="skill-card">🧠 DSA</div>
+<div class="skill-card">⚛️ React</div>
+<div class="skill-card">🌐 HTML</div>
+
+</div>
+
+<!-- ROW 2 -->
+
+<div class="skills-row right-move">
+
+<div class="skill-card">🔥 Competitive Programming</div>
+<div class="skill-card">📦 APIs</div>
+<div class="skill-card">⚡ Problem Solving</div>
+<div class="skill-card">🛠️ UI Design</div>
+<div class="skill-card">⚙️ Express</div>
+<div class="skill-card">🧩 OOP</div>
+<div class="skill-card">🗄️ MongoDB</div>
+<div class="skill-card">📱 Responsive Design</div>
+
+<div class="skill-card">🔥 Competitive Programming</div>
+<div class="skill-card">📦 APIs</div>
+<div class="skill-card">⚡ Problem Solving</div>
+<div class="skill-card">🛠️ UI Design</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<h2 class="section-title">
+Projects
+</h2>
+
+<div class="projects">
+
+<div class="project">
+
+<h3>Sense3D</h3>
+
+<p>
+
+Interactive 3D learning environment using AI and hand tracking for immersive educational visualization.
+
+</p>
+
+</div>
+
+<div class="project">
+
+<h3>Solar Clock</h3>
+
+<p>
+
+Dynamic solar positioning and visualization project exploring sunlight and time interaction.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2 class="section-title">
+Get in Touch
+</h2>
+
+<form
+class="contact-form"
+action="https://formsubmit.co/el/zofixo"
+method="POST">
+
+<input
+type="text"
+placeholder="Your Name"
+required>
+
+<input
+type="email"
+placeholder="Your Email"
+required>
+
+<textarea
+placeholder="Your Message">
+</textarea>
+
+<button type="submit">
+Send Message
+</button>
+
+</form>
+
+</section>
+
+<footer>
+
+Nishant Kumar Portfolio — 2026
+
+</footer>
+
+</div>
+
+<script>
+
+function toggleMenu(){
+
+document
+.getElementById("sidebar")
+.classList
+.toggle("active");
+
+}
+
+</script>
+
+</body>
+</html>
